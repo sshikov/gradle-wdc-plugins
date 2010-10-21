@@ -1,3 +1,11 @@
+== version 0.5 ==
+
++ added copy() method
+
+== version 0.4 ==
+
++ added support for password request at runtime
+
 == version 0.3 ==
 + added support for more svn commands (branch, tag, switch)
 

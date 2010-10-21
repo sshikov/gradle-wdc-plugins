@@ -18,7 +18,7 @@
 apply plugin: 'groovy'
 
 
-version = '0.4-20100813'
+version = '0.5-20101018'
 group = 'org.gradle.plugins'
 
 

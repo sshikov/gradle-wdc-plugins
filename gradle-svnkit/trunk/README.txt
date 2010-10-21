@@ -4,7 +4,7 @@ Version: 0.4
 Author: Walter Di Carlo
 
 
-1. DESCRIPTION
+___DESCRIPTION___
 
 The SvnKit Gradle plugin allows Gradle scripts to interact with Subversion repositories.
 This is possible thanks to the SVNKit library (http://svnkit.com/) which is a pure Java Subversion client library. 
@@ -13,7 +13,7 @@ Please, note that this software is in it initial state of development.
 
 Any suggestion/question can be sent to the address walter@di-carlo.it
 
-2. INSTALLATION
+___INSTALLATION___
 
 The following are the components used to develop the plugin.
 - JRE 1.6 (used the new Console class to request the password)
@@ -59,7 +59,7 @@ Once, all required components have been downloadedk and installed, then:
 
 	BUILD SUCCESSFUL
 	 
-3. SVNKIT PLUGIN TASKS
+___SVNKIT_PLUGIN_TASKS___
 
 Here is a brief description of each task
 
@@ -78,20 +78,22 @@ Here is a brief description of each task
 	:svnkit_tag		Copy the WC to the path in svn_tag
 	:svnkit_update		Update the WC
 
-4. KNOW LIMITATIONS
+___KNOW_LIMITATIONS___
 
 - Not all tasks and protocols have been tested 
 - The password is requested even if it is not necessary
 - ...
  
-5. TODO
+___TODO___
 
 - Refactor the code to make it more efficient
+	* The instance of the WorkingCopy could be shared between the tasks
 - Test other protocols (svn, svn+ssh, etc)
 - Improve the account management
+- add task to generate the workspace.csv file from current configuration
 - ...
 
-6. LICENSING
+___LICENSING___
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

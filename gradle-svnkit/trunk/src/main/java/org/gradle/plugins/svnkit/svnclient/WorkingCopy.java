@@ -482,17 +482,23 @@ public class WorkingCopy {
         System.out.println();
 
     }
-    
     public void copy() {
+    	copy(false);
+    }
+    
+    public void copy(final boolean isMoving ) {
         long committedRevision = -1;
         
-        System.out.println("Copying '" + url + "' to '" + copyURL + "'...");
+        if( isMoving == true )
+            System.out.println("Moving '" + url + "' to '" + copyURL + "'...");
+        else
+        	System.out.println("Copying '" + url + "' to '" + copyURL + "'...");
         try {
             /*
              * makes a branch of url at copyURL - that is URL->URL copying
              * with history
              */
-            committedRevision = copy(url, copyURL, false,
+            committedRevision = copy(url, copyURL, isMoving,
                     "remotely copying '" + url + "' to '" + copyURL + "'")
                     .getNewRevision();
         } catch (SVNException svne) {

@@ -17,6 +17,9 @@
 
 package org.gradle.plugins.svnkit
 
+import org.gradle.api.Project
+import org.gradle.plugins.svnkit.svnclient.WorkingCopy;
+
 class GroovySvnKitPluginConvention {
 	String svn_root = null
 	String svn_project = null
@@ -29,6 +32,33 @@ class GroovySvnKitPluginConvention {
 	String svn_branch_name
 	String svn_tag_name
 	
+	private Project _project = null
+	
+	public GroovySvnKitPluginConvention( final Project project ){
+		_project = project 
+	}
+	
+	public Project getProject() {
+		return _project
+	}
+	
+	public void copy( final String srcPath, final String dstPath, final boolean isMove ){
+		assert srcPath != null
+		assert dstPath != null
+		
+		
+		def svn_wc = new WorkingCopy(
+			svn_root,
+			svn_project,
+			srcPath, // from path
+			dstPath, // to path
+			getProject().projectDir.path,
+			svn_username,
+			svn_password)
+		
+		svn_wc.copy(isMove)
+	}
+
 	  def svnkit(Closure closure) {
 		  closure.delegate = this
 		  closure()

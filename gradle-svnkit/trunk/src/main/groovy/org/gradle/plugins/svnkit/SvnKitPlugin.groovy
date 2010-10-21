@@ -28,7 +28,7 @@ import org.gradle.plugins.svnkit.svnclient.WorkingCopy;
 
 class SvnKitPlugin implements Plugin<Project> {
 	def void apply(Project project) {
-		project.convention.plugins.svnkit = new GroovySvnKitPluginConvention()
+		project.convention.plugins.svnkit = new GroovySvnKitPluginConvention(project)
 		
 		project.task('svnkit_properties') << { task ->
 			println "SvnKit Plugin Properties"
