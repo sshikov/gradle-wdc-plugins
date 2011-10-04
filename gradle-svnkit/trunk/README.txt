@@ -1,6 +1,6 @@
 This is the README.txt file for the SvnKit Gradle plugin.
 
-Version: 0.4
+Version: 0.5
 Author: Walter Di Carlo
 
 
@@ -20,7 +20,9 @@ The following are the components used to develop the plugin.
 - Gradle 0.9 rc1
 - SvnKit 1.3.4
 
-Once, all required components have been downloadedk and installed, then:
+Build gradle-svnkit.jar from the Gradle SvnKit project.
+
+Once, all required components have been downloaded and installed, then:
 - Copy the gradle-svnkit.jar and the svnkit.jar in the plugins folder of gradle (<gradle-root>/lib/plugins)
 - Add the plugin to the projects that should be stored in a Subversion repository
 	apply plugin: 'svnkit'
