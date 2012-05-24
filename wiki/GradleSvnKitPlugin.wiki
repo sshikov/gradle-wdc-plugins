@@ -1,0 +1,12 @@
+The Gradle SvnKit plugin is a Gradle plugin to attach a Gradle project to a Subversion repository
+
+= Introduction =
+
+Once the svnkit plugin is applied to a project with
+
+{{{
+
+            apply plugin: svnkit
+}}}
+
+the project acquires a set of tasks which allows to interact with a Subversion repository.
