@@ -5,7 +5,18 @@ The Gradle SvnKit plugin is a Gradle plugin to attach a Gradle project to a Subv
 Once the svnkit plugin is applied to a project with
 
 {{{
-
+            buildscript {
+               repositories {
+                  flatDir {
+                     dirs new File( gradle.gradleHomeDir, 'lib/plugins')
+                  }
+               }
+               dependencies {
+                  classpath group: 'org.gradle.plugins', name: 'gradle-svnkit', version: '0.5-20101018'
+                  classpath group: 'org.gradle.plugins', name: 'svnkit', version: ''
+                  classpath group: 'org.gradle.plugins', name: 'svnkit-javahl', version: ''
+               }
+            }
             apply plugin: svnkit
 }}}
 
