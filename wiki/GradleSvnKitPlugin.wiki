@@ -20,4 +20,12 @@ Once the svnkit plugin is applied to a project with
             apply plugin: svnkit
 }}}
 
-the project acquires a set of tasks which allows to interact with a Subversion repository.
+the project acquires a set of tasks which allows to interact with a Subversion repository identified by the following variables:
+
+{{{
+   svn_username
+   svn_password
+   svn_root
+   svn_project
+   svn_trunk
+}}}
