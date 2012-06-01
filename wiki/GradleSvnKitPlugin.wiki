@@ -75,3 +75,5 @@ task.project.svnkit.svn_password.equals("") ) {
  }
 }
 }}}
+
+In case you need to do the same for many projects I suggest to use also my other plugin gradle-ws which allows to store values of common variables in a CSV file.
